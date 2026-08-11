@@ -7,6 +7,19 @@ This small application determines the daily exposure to a cosmetic product conta
 
 This tool is provided as-is, and the developer(s) are not liable for any errors, inaccuracies, or issues that may arise from its use. It is essential to exercise your own due diligence and verify the results obtained through this tool. The developer(s) make no guarantees about the accuracy, completeness, or reliability of the calculated data.
 
+## Calculation
+
+An explanation and rationale for the calculation methods will be provided here in the future.
+
+
+## Data Sources
+
+- [Environmental Protection Agency's Exposure Factors Handbook Chapter 17](https://www.epa.gov/sites/default/files/2015-09/documents/efh-chapter17.pdf)
+  - Table 17-41. Average Amount of Product Applied per Applicationa (grams) 
+- [THE SCCS NOTES OF GUIDANCE FOR THE TESTING OF COSMETIC INGREDIENTS AND THEIR SAFETY EVALUATION 12TH REVISION](https://health.ec.europa.eu/document/download/32a999f7-d820-496a-b659-d8c296cc99c1_en?filename=sccs_o_273_final.pdf)
+  - Table 3A (Page 27)
+
+
 ## Installation
 
 Packaged binaries and installation methods are coming. 
