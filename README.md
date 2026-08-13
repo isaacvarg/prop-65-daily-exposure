@@ -9,8 +9,22 @@ This tool is provided as-is, and the developer(s) are not liable for any errors,
 
 ## Calculation
 
-An explanation and rationale for the calculation methods will be provided here in the future.
+The following details the step by step mathematical model used to determine the daily exposure to a residual CA Prop. 65 chemical within an intentionally added material. The resulting residual chemical exposure in the cosmetic formulation can be compared against California Proposition 65 Safe Harbor Levels (NSRL/MADL) to determine if a warning is required.
 
+### 1. Chemical concentration in finished product
+
+This formula calculates the concentration of the residual chemical in the finished cosmetic product based on the raw material inclusion rate:
+
+```math
+C_{\text{chem, finished}} = C_{\text{chem, raw}} \times P_{\text{raw}}
+```
+**_where_**
+- $`C_{\text{chem, finished}}`$ ≡ concentration of the Prop. 65 chemical in the finished product, in units of μg/g or ppm
+- $`C_{\text{chem, raw}}`$ ≡ maximum residual contaminant level in the raw ingredient, in units of μg/g or ppm
+  - We use maximum contaminant level because it is best to use worst case scenario for safety
+- $`P_{\text{raw}`$ ≡ inclusion fraction of raw ingredient in final formula
+  - i.e., W/W%
+  - e.g., 14% = 0.14 
 
 ## Data Sources
 
