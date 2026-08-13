@@ -2,11 +2,6 @@
 
 This small application determines the daily exposure to a cosmetic product containing a Prop. 65 chemical. The result can then be compared to the corresponding Safe Harbor Level to determine if a Prop. 65 warning is required for the product.
 
-## Disclaimer
-**USE AT YOUR OWN RISK.**
-
-This tool is provided as-is, and the developer(s) are not liable for any errors, inaccuracies, or issues that may arise from its use. It is essential to exercise your own due diligence and verify the results obtained through this tool. The developer(s) make no guarantees about the accuracy, completeness, or reliability of the calculated data.
-
 ## Calculation
 
 The following details the step by step mathematical model used to determine the daily exposure to a residual CA Prop. 65 chemical within an intentionally added material. The resulting residual chemical exposure in the cosmetic formulation can be compared against California Proposition 65 Safe Harbor Levels (NSRL/MADL) to determine if a warning is required.
@@ -78,6 +73,11 @@ E_{\text{daily}} = C_{\text{chem, finished}} \times m_{\text{effective}} \times 
 - [THE SCCS NOTES OF GUIDANCE FOR THE TESTING OF COSMETIC INGREDIENTS AND THEIR SAFETY EVALUATION 12TH REVISION](https://health.ec.europa.eu/document/download/32a999f7-d820-496a-b659-d8c296cc99c1_en?filename=sccs_o_273_final.pdf)
   - Table 3A (Page 27)
 - [OEHHA Chemicals Considered or Listed Under Prop. 65](https://oehha.ca.gov/proposition-65/chemicals-considered-or-listed-under-proposition-65)
+
+## Disclaimer
+**USE AT YOUR OWN RISK.**
+
+This tool is provided as-is, and the developer(s) are not liable for any errors, inaccuracies, or issues that may arise from its use. It is essential to exercise your own due diligence and verify the results obtained through this tool. The developer(s) make no guarantees about the accuracy, completeness, or reliability of the calculated data.
 
 ## Installation
 
