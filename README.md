@@ -22,9 +22,54 @@ C_{\text{chem, finished}} = C_{\text{chem, raw}} \times P_{\text{raw}}
 - $`C_{\text{chem, finished}}`$ ≡ concentration of the Prop. 65 chemical in the finished product, in units of μg/g or ppm
 - $`C_{\text{chem, raw}}`$ ≡ maximum residual contaminant level in the raw ingredient, in units of μg/g or ppm
   - We use maximum contaminant level because it is best to use worst case scenario for safety
-- $`P_{\text{raw}`$ ≡ inclusion fraction of raw ingredient in final formula
+- $`P_{\text{raw}}`$ ≡ inclusion fraction of raw ingredient in final formula
   - i.e., W/W%
   - e.g., 14% = 0.14 
+
+### 2. Effective Daily Applied Mass
+
+This formula calculates the mass of the product remaining on skin/hair after normal consumer usage:
+
+```math
+m_{\text{effective}} = m_{\text{usage, avg}} \times R
+```
+**_where_**
+- $`m_{\text{effective}}`$ ≡ the mass of product that remains after normal usage
+- $`m_{\text{usage, avg}}`$ ≡ the average mass of finished product used.
+  - These values can be viewed below in sources
+- $`R`$ ≡ product retention factor, unitless
+  - These values can be found below in sources 
+  - Typically 1.0 for leave-in and 0.1 or 0.01 for rinse-off
+
+### 3. Total Daily Chemical Exposure
+
+This formula calculates the total daily mass of the residual chemical absorbed/exposed per day for typical usage:
+
+```math
+E_{\text{daily}} = C_{\text{chem, finished}} \times m_{\text{usage, avg}} \times R \times AF
+```
+
+_or simplified using_ $`m_{\text{effective}}`$:
+
+```math
+E_{\text{daily}} = C_{\text{chem, finished}} \times m_{\text{effective}} \times AF
+```
+**_where_**
+- $`E_{\text{daily}}`$ ≡ the total daily exposure to the Prop. 65 chemical, in units of μg/day
+- $`C_{\text{chem, finished}}`$ ≡ concentration of the Prop. 65 chemical in the finished product, in units of μg/g 
+- $`m_{\text{usage, avg}}`$ ≡ the average mass of finished product used.
+- $`R`$ ≡ product retention factor, unitless
+- $`AF`$ ≡ dermal absorption factor, unitless
+  - This defaults to a conservative 1.00, as anything below 1.00 would 
+  - require empirical toxicological dermal penetration data
+
+### 4. Prop. 65 Safe Harbor Evaluation
+
+```math
+\text{Status} = \begin{cases} \text{Exempt (No Warning Required)} & \text{if } E_{\text{daily}} \le \text{Safe Harbor Level} \\ \text{Warning Required} & \text{if } E_{\text{daily}} > \text{Safe Harbor Level} \end{cases}
+```
+- Safe Harbor Levels can be found on the [OEHHA Webiste](https://oehha.ca.gov/proposition-65/chemicals-considered-or-listed-under-proposition-65)
+- This is an example for [Dichloroacetic acid](https://oehha.ca.gov/proposition-65/chemicals/dichloroacetic-acid)
 
 ## Data Sources
 
@@ -32,7 +77,7 @@ C_{\text{chem, finished}} = C_{\text{chem, raw}} \times P_{\text{raw}}
   - Table 17-41. Average Amount of Product Applied per Applicationa (grams) 
 - [THE SCCS NOTES OF GUIDANCE FOR THE TESTING OF COSMETIC INGREDIENTS AND THEIR SAFETY EVALUATION 12TH REVISION](https://health.ec.europa.eu/document/download/32a999f7-d820-496a-b659-d8c296cc99c1_en?filename=sccs_o_273_final.pdf)
   - Table 3A (Page 27)
-
+- [OEHHA Chemicals Considered or Listed Under Prop. 65](https://oehha.ca.gov/proposition-65/chemicals-considered-or-listed-under-proposition-65)
 
 ## Installation
 
