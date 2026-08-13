@@ -21,8 +21,8 @@ jobs:
 
       - name: Build Binaries
         run: |
-          GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o myapp-linux-amd64 main.go
-          GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o myapp-windows-amd64.exe main.go
+          GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o daily-exposure-linux-amd64 main.go
+          GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o daily-exposure-windows-amd64.exe main.go
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
